@@ -20,34 +20,25 @@ const app = new Vue({
     'Lorem ipsum, dolor sit amet consectetur adipisicingelit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicingelit. Et temporibus voluptatum suscipit temporealiquid deleniti aut veniam inventore eligendi ex adullam,',
     'Et temporibus voluptatum suscipit tempore aliquiddeleniti aut veniam inventore eligendi ex ad ullam,'
-    ]
+    ],
+
+    counter:0
   },
   methods:{
-    
+    nextSlide(){
+      this.counter++;
+      if(this.counter > this.images.length - 1){
+        this.counter = 0;
+      }
+    },
+
+    prevSlide(){
+      this.counter--;
+      if(this.counter < 0){
+        this.counter = this.images.length - 1;
+      }
+    }
   }
-})
+});
 
 
-
-
-const image = ['img/01.jpg',
-  'img/02.jpg',
-  'img/03.jpg',
-  'img/04.jpg',
-  'img/05.jpg'
-];
-
-const title = ['Svezia',
-  'Svizzera',
-  'Gran Bretagna',
-  'Germania',
-  'Paradise'
-];
-
-const text = [
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-  'Lorem ipsum',
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-  'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
-];
