@@ -60,7 +60,7 @@
   height: 100%;
 }
 
-.mg-slider .mg-item.mg-active{
+.mg-item.mg-active{
   border: 1px solid white;
   opacity: 1;
 }

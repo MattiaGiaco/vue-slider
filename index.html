@@ -24,7 +24,7 @@
      
   
         <div class="mg-slider">
-          <div v-for="(image, indice) in images" :class="{selected : indice === counter}" class="mg-item mg-active">
+          <div v-for="(image, indice) in images" :class="{'mg-active' : indice === counter}" class="mg-item">
             <img :src="image" alt="">   
           </div>
           
